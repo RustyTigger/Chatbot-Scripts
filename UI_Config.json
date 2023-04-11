@@ -1,0 +1,122 @@
+{
+  "output_file": "settings.json",
+  "findcommand": {
+     "type": "textbox",
+     "value": "find",
+     "label": "command for !sims find",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "findresponse": {
+  "type": "textbox",
+  "value": "Am moving to next sim in a moment.",
+  "label": "!sims find response",
+  "tooltip": "tooltip.",
+  "group": "Core"
+  },
+  "nextcommand": {
+     "type": "textbox",
+     "value": "next",
+     "label": "command for !sims next",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "nextresponse": {
+    "type": "textbox",
+    "value": "Finding next sim...",
+    "label": "!sims next response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+   "simonecommand": {
+     "type": "textbox",
+     "value": "sim1",
+     "label": "command for !sims sim1",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simoneresponse": {
+    "type": "textbox",
+    "value": "Locating sim 1",
+    "label": "!sims sim1 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+   "simtwocommand": {
+     "type": "textbox",
+     "value": "sim2",
+     "label": "command for !sims sim2",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simtworesponse": {
+    "type": "textbox",
+    "value": "Locating sim 2",
+    "label": "!sims sim2 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+    "simthreecommand": {
+     "type": "textbox",
+     "value": "sim3",
+     "label": "command for !sims sim3",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simthreeresponse": {
+    "type": "textbox",
+    "value": "Locating sim 3",
+    "label": "!sims sim3 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+  "permission": {
+    "type": "dropdown",
+    "value": "everyone",
+    "items": ["everyone","moderator","subscriber","user_specific","editor"],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Permission"
+    },
+  "info": {
+  "type": "textbox",
+  "value": "",
+  "label": "Info",
+  "tooltip": "This field should only be filled when using the user_specific permission.",
+  "group": "Other"
+  },
+  "cd_response": {
+    "type": "textbox",
+    "value": "{0} the command is still on cooldown for {1} seconds!",
+    "label": "Cooldown Response",
+    "tooltip": "The message that the bot will display.",
+    "group": "Cooldowns"
+  },
+  "use_cd": {
+    "type": "checkbox",
+    "value": true,
+    "label": "Use Cooldown Message",
+    "tooltip": "To display CoolDown Message?",
+    "group": "Cooldowns"
+  },
+  "user_cd": {
+    "type": "slider",
+    "label": "User COOLDOWN (seconds)",
+    "value": 10,
+    "min": 1,
+    "max": 100,
+    "ticks": 1,
+    "tooltip": "Cooldown in seconds.",
+    "group": "Cooldowns"
+  },
+  "global_cd": {
+    "type": "slider",
+    "label": "Global COOLDOWN (seconds)",
+    "value": 10,
+    "min": 1,
+    "max": 100,
+    "ticks": 1,
+    "tooltip": "Cooldown in seconds.",
+    "group": "Cooldowns"
+  }
+}
