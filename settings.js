@@ -1,0 +1,16 @@
+﻿var settings = {
+  "cd_response": "{0} the command is still on cooldown for {1} seconds!",
+  "use_cd": true,
+  "user_cd": 10.0,
+  "findcommand": "find",
+  "findresponse": "Am moving to next sim in a moment.",
+  "nextcommand": "next",
+  "nextresponse": "Finding next sim...",
+  "permission": "everyone",
+  "info": "",
+  "global_cd": 10.0,
+  "simonecommand": "sim1",
+  "simoneresponse": "Locating sim 1",
+  "simtwocommand": "sim2",
+  "simtworesponse": "Locating sim 2"
+};
