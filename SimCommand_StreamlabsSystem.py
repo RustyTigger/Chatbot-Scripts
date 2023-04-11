@@ -72,29 +72,39 @@ def Execute(data):
     simthree_response = settings["simthreeresponse"]
     username = data.UserName
 
-
+# ___FIND SIM COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == find_command:
         response = username + ", " + find_response
         send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/find.txt", "w")
+        f.write("DEBUG: WROTE find.txt")
+        f.close()
+# _______________________________________________________________________________
+        # apply cooldowns
         Parent.AddCooldown(ScriptName, find_command, settings["user_cd"])
         Parent.AddUserCooldown(ScriptName, find_command, data.User, settings["global_cd"])
+# ________________________________________________________________________________
         return
-
+# ___NEXT SIM COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == next_command:
         response = username + ", " + next_response
         send_message(response)
         return
 
+# ___SIM1 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simone_command:
         response = username + ", " + simone_response
         send_message(response)
         return
 
+# SIM2 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simtwo_command:
         response = username + ", " + simtwo_response
         send_message(response)
         return
 
+    # SIM3 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simthree_command:
         response = username + ", " + simthree_response
         send_message(response)
