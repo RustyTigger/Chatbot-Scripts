@@ -70,6 +70,76 @@
     "tooltip": "tooltip.",
     "group": "Core"
   },
+  "simfourcommand": {
+     "type": "textbox",
+     "value": "sim4",
+     "label": "command for !sims sim4",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simfourresponse": {
+    "type": "textbox",
+    "value": "Locating sim 4",
+    "label": "!sims sim4 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+  "simfivecommand": {
+     "type": "textbox",
+     "value": "sim5",
+     "label": "command for !sims sim5",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simfiveresponse": {
+    "type": "textbox",
+    "value": "Locating sim 5",
+    "label": "!sims sim5 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+  "simsixcommand": {
+     "type": "textbox",
+     "value": "sim6",
+     "label": "command for !sims sim6",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simsixresponse": {
+    "type": "textbox",
+    "value": "Locating sim 6",
+    "label": "!sims sim6 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+  "simsevencommand": {
+     "type": "textbox",
+     "value": "sim7",
+     "label": "command for !sims sim7",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simsevenresponse": {
+    "type": "textbox",
+    "value": "Locating sim 7",
+    "label": "!sims sim7 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
+  "simeightcommand": {
+     "type": "textbox",
+     "value": "sim8",
+     "label": "command for !sims sim8",
+     "tooltip": "tooltip.",
+     "group": "Core"
+   },
+  "simeightresponse": {
+    "type": "textbox",
+    "value": "Locating sim 8",
+    "label": "!sims sim8 response",
+    "tooltip": "tooltip.",
+    "group": "Core"
+  },
   "permission": {
     "type": "dropdown",
     "value": "everyone",

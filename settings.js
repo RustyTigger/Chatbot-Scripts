@@ -14,5 +14,15 @@
   "simtwocommand": "sim2",
   "simtworesponse": "Locating sim 2",
   "simthreecommand": "sim3",
-  "simthreeresponse": "Locating sim 3"
+  "simthreeresponse": "Locating sim 3",
+  "simfourcommand": "sim4",
+  "simfourresponse": "Locating sim 4",
+  "simfivecommand": "sim5",
+  "simfiveresponse": "Locating sim 5",
+  "simsixcommand": "sim6",
+  "simsixresponse": "Locating sim 6",
+  "simsevencommand": "sim7",
+  "simsevenresponse": "Locating sim 7",
+  "simeightcommand": "sim8",
+  "simeightresponse": "Locating sim 8"
 };

@@ -14,14 +14,18 @@ ScriptName = "Sim Commander"
 Website = "twitch.tv/therustytigger"
 Description = "Sims 4 Chat Control Bot"
 Creator = "TheRustyTigger"
-Version = "0.3"
+Version = "0.8"
 
 
 # ---------------------------------------
 #   Version Information
 # ---------------------------------------
 # Version:
-# > 0.0.0.5 <
+# > 0.8 <
+# tie in with streamlabs complete, command templetes finished, UI properly coded
+#ISSUES: verify cooldowns are working properly, doesn't seem to apply to me
+
+# > 0.5 <
 # Rewrote project from ground up following boilerplate examples,
 # Began combining the various triggers into one script
 
@@ -60,16 +64,21 @@ def Execute(data):
     simone_command = settings["simonecommand"]
     simtwo_command = settings["simtwocommand"]
     simthree_command = settings["simthreecommand"]
-    # simfour_command = settings["simfourcommand"]
-    # simfive_command = settings["simfivecommand"]
-    # simsix_command = settings["simsixcommand"]
-    # simseven_command = settings["simsevencommand"]
-    # simeight_command = settings["simeightcommand"]
+    simfour_command = settings["simfourcommand"]
+    simfive_command = settings["simfivecommand"]
+    simsix_command = settings["simsixcommand"]
+    simseven_command = settings["simsevencommand"]
+    simeight_command = settings["simeightcommand"]
     find_response = settings["findresponse"]
     next_response = settings["nextresponse"]
     simone_response = settings["simoneresponse"]
     simtwo_response = settings["simtworesponse"]
     simthree_response = settings["simthreeresponse"]
+    simfour_response = settings["simfourresponse"]
+    simfive_response = settings["simfiveresponse"]
+    simsix_response = settings["simsixresponse"]
+    simseven_response = settings["simsevenresponse"]
+    simeight_response = settings["simeightresponse"]
     username = data.UserName
 
 # ___FIND SIM COMMAND_____________________________________________________________
@@ -78,36 +87,152 @@ def Execute(data):
         send_message(response)
         # create the file for AHK to see in c:\simscript or wherever you put it
         f = open("c:\simscript/find.txt", "w")
-        f.write("DEBUG: WROTE find.txt")
+        f.write("find trigger")
         f.close()
-# _______________________________________________________________________________
+        send_message("DEBUG: WRITING AHK FILE find.txt")
         # apply cooldowns
         Parent.AddCooldown(ScriptName, find_command, settings["user_cd"])
         Parent.AddUserCooldown(ScriptName, find_command, data.User, settings["global_cd"])
-# ________________________________________________________________________________
+        send_message("DEBUG: APPLIED COOLDOWNS")
         return
+
 # ___NEXT SIM COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == next_command:
         response = username + ", " + next_response
         send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/next.txt", "w")
+        f.write("next trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE next.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, next_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, next_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
         return
 
 # ___SIM1 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simone_command:
         response = username + ", " + simone_response
         send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simone.txt", "w")
+        f.write("Simtwo trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simone.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simone_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simone_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
         return
 
 # SIM2 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simtwo_command:
         response = username + ", " + simtwo_response
         send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simtwo.txt", "w")
+        f.write("simtwo trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simtwo.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simtwo_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simtwo_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
         return
 
     # SIM3 COMMAND_____________________________________________________________
     if data.GetParam(0) == "!sims" and data.GetParam(1) == simthree_command:
         response = username + ", " + simthree_response
         send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simthree.txt", "w")
+        f.write("simthree trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simthree.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simthree_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simthree_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    # SIM4 COMMAND_____________________________________________________________
+    if data.GetParam(0) == "!sims" and data.GetParam(1) == simfour_command:
+        response = username + ", " + simfour_response
+        send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simfour.txt", "w")
+        f.write("simfour")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simfour.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simfour_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simfour_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    # SIM5 COMMAND_____________________________________________________________
+    if data.GetParam(0) == "!sims" and data.GetParam(1) == simfive_command:
+        response = username + ", " + simfive_response
+        send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simfive.txt", "w")
+        f.write("simfive trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simfive.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simfive_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simfive_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    # SIM6 COMMAND_____________________________________________________________
+    if data.GetParam(0) == "!sims" and data.GetParam(1) == simsix_command:
+        response = username + ", " + simsix_response
+        send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simsix.txt", "w")
+        f.write("simsix trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simsix.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simsix_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simsix_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    # SIM7 COMMAND_____________________________________________________________
+    if data.GetParam(0) == "!sims" and data.GetParam(1) == simseven_command:
+        response = username + ", " + simseven_response
+        send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simseven.txt", "w")
+        f.write("simseven trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simseven.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simseven_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simseven_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    # SIM8 COMMAND_____________________________________________________________
+    if data.GetParam(0) == "!sims" and data.GetParam(1) == simeight_command:
+        response = username + ", " + simeight_response
+        send_message(response)
+        # create the file for AHK to see in c:\simscript or wherever you put it
+        f = open("c:\simscript/simeight.txt", "w")
+        f.write("simeight trigger")
+        f.close()
+        send_message("DEBUG: WRITING AHK FILE simeight.txt")
+        # apply cooldowns
+        Parent.AddCooldown(ScriptName, simeight_command, settings["user_cd"])
+        Parent.AddUserCooldown(ScriptName, simeight_command, data.User, settings["global_cd"])
+        send_message("DEBUG: APPLIED COOLDOWNS")
+        return
+
+    elif data.GetParam(0) == "!sims":
+        send_message("Invalid Syntax after !sims usage ")
         return
 
 # ---------------------------
